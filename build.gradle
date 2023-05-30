@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'kr.entree.spigradle' version '2.4.3'
+}
+
+group = 'de.c3kay'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly spigot('1.19.4')
+}
+
+spigot {
+    debug {
+        jvmArgs '-Xmx4G'
+    }
+}
