@@ -25,7 +25,7 @@ jobs:
           arguments: build
 
       - name: Create release
-        uses: softprops/action-gh-release
+        uses: softprops/action-gh-release@master
         with:
           files: 'build/libs/*.jar'
           fail_on_unmatched_files: true
