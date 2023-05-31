@@ -1,5 +1,6 @@
-# true = disabled
+# true = explosion enabled
 tnt: true
 endercrystal: true
-creeper: true
-ghast: true
+creeper: false
+ghast: false
+wither: false

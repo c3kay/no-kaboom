@@ -12,7 +12,7 @@ public class NoKaboom extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        getLogger().info("Plugin disabled");
+        getLogger().info("NoKaboom disabled");
     }
 
     @Override
@@ -32,18 +32,25 @@ public class NoKaboom extends JavaPlugin implements Listener {
                 EntityType.MINECART_TNT, "tnt",
                 EntityType.ENDER_CRYSTAL, "endercrystal",
                 EntityType.CREEPER, "creeper",
-                EntityType.FIREBALL, "ghast"
+                EntityType.FIREBALL, "ghast",
+                EntityType.WITHER, "wither",
+                EntityType.WITHER_SKULL, "wither"
         );
 
         final EntityType explodedEntity = e.getEntityType();
 
-
         if (
                 explosiveEntities.containsKey(explodedEntity)
-                && getConfig().getBoolean(explosiveEntities.get(explodedEntity), false)
+                && !getConfig().getBoolean(explosiveEntities.get(explodedEntity), false)
         ) {
-                e.setCancelled(true);
-                getLogger().info("Canceled explosion of " + explodedEntity);
+            e.setCancelled(true);
+
+            // this is only for the sound and animation
+            // unfortunately the animation is really small with power = 0
+            // TODO: does the power of explosions stack?
+            e.getEntity().getWorld().createExplosion(e.getLocation(), 0F, false, false);
+
+            getLogger().info("Canceled explosion of " + explodedEntity);
         }
     }
 }
