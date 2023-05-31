@@ -1,4 +1,4 @@
-# "NoKaboom" Bukkit Plugin
+# "NoKaboom" Spigot Plugin
 
 Disable explosions in Minecraft without using a gamerule.
 
