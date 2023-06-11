@@ -4,14 +4,14 @@ plugins {
 }
 
 group = 'de.c3kay'
-version = '0.0.2'
+version = '0.0.3'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compileOnly spigot('1.19.4')
+    compileOnly spigot('1.20')
 }
 
 spigot {
