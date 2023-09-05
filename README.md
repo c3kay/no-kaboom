@@ -1,6 +1,20 @@
-# "NoKaboom" Spigot Plugin
+# "NoKaboom" MC Spigot/Paper Plugin
 
-Disable explosions in Minecraft without using a gamerule.
+Disable explosions in Minecraft without using gamerules.
+
+## Features
+
+The following Explosions can be disabled via a config:
+
+- Creeper
+- Fireballs of Ghasts
+- Wither Projectiles
+- TNT* (including Minecart TNT)
+- Endercrystals*
+
+_(*) Explosions enabled by default._
+
+## Contribute
 
 ### Build
 
@@ -18,4 +32,4 @@ Starting a PaperMC server with the plugin installed:
 ./gradlew debugPaper
 ```
 
-or use the generated IntelliJ run config `RunPaper`.
+or use the generated IntelliJ run config `RunPaper` or `RunSpigot`.
