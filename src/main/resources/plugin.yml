@@ -1,0 +1,6 @@
+name: NoKaboom
+version: 1.0.0
+main: de.c3kay.NoKaboom.NoKaboom
+description: Disable explosions with using gamerules.
+author: c3kay
+api-version: '1.21.1'
