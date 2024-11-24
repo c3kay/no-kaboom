@@ -28,9 +28,9 @@ public class NoKaboom extends JavaPlugin implements Listener {
     @EventHandler
     public void onExplode(EntityExplodeEvent e) {
         final Map<EntityType, String> explosiveEntities = Map.of(
-                EntityType.PRIMED_TNT, "tnt",
-                EntityType.MINECART_TNT, "tnt",
-                EntityType.ENDER_CRYSTAL, "endercrystal",
+                EntityType.TNT, "tnt",
+                EntityType.TNT_MINECART, "tnt",
+                EntityType.END_CRYSTAL, "endercrystal",
                 EntityType.CREEPER, "creeper",
                 EntityType.FIREBALL, "ghast",
                 EntityType.WITHER, "wither",
